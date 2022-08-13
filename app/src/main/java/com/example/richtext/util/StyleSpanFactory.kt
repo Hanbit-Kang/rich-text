@@ -7,6 +7,10 @@ import android.text.style.UnderlineSpan
 
 class StyleSpanFactory {
     companion object {
+        /**
+         * Returns a Span by [style].
+         * @param style A name of [TextStyle]
+         */
         fun createStyleSpan(style: String): Any {
             return when (style) {
                 TextStyle.BOLD.name -> StyleSpan(Typeface.BOLD)

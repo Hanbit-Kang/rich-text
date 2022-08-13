@@ -10,6 +10,9 @@ import com.example.richtext.data.RichText
 import com.example.richtext.util.StyleSpanFactory.Companion.createStyleSpan
 import java.net.URL
 
+/**
+ * Its [Builder] returns a [SpannableString] whose style has changed by [RichText].
+ */
 class RichTextSpannableString(richText: RichText): SpannableString(richText.text ?: " ") {
     class Builder(private val richText: RichText) {
         private var spannableString = SpannableString(richText.text ?: " ")
