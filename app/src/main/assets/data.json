@@ -1,0 +1,36 @@
+{
+  "richText": [
+    {
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "text": " Spannable",
+      "style": "BOLD",
+      "color": "#3182F6",
+      "size": 1.2
+    },
+    {
+      "text": "Text",
+      "color": "#3182F6"
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "image": "https://picsum.photos/201"
+    },
+    {
+      "text": " 안녕하세요. "
+    },
+    {
+      "text": "\"홍길동\"",
+      "style": "BOLD",
+      "color": "#000000",
+      "size": 1.5
+    },
+    {
+      "text": "이라고 합니다.",
+      "style": "STRIKE_THROUGH"
+    }
+  ]
+}
