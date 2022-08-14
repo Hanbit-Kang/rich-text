@@ -19,25 +19,24 @@ class RichTextSpannableString(richText: RichText): SpannableString(richText.text
 
         fun setColor(color: String?): Builder {
             color?.let {
-                spannableString.setSpan(
-                    ForegroundColorSpan(Color.parseColor(it)),
-                    0,
-                    richText.text?.length ?: 0,
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
+                val span = ForegroundColorSpan(Color.parseColor(it))
+                setSpanForTextRange(span)
             }
 
             return this
         }
 
+        private fun setSpanForTextRange(span: Any?) {
+            spannableString.setSpan(
+                span,
+                0, richText.text?.length ?: 0,
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+            )
+        }
+
         fun setStyle(style: String?): Builder {
             style?.let {
-                spannableString.setSpan(
-                    createStyleSpan(it),
-                    0,
-                    richText.text?.length ?: 0,
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
+                setSpanForTextRange(createStyleSpan(it))
             }
 
             return this
@@ -45,12 +44,8 @@ class RichTextSpannableString(richText: RichText): SpannableString(richText.text
 
         fun setSize(size: Float?): Builder {
             size?.let {
-                spannableString.setSpan(
-                    RelativeSizeSpan(it),
-                    0,
-                    richText.text?.length ?: 0,
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
+                val span = RelativeSizeSpan(it)
+                setSpanForTextRange(span)
             }
 
             return this
