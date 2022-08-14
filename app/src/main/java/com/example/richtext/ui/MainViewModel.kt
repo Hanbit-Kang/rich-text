@@ -27,7 +27,7 @@ class MainViewModel: ViewModel() {
             // <!-- TODO: Replace with loading List<RichText> by calling API
             // Json to List<RichText>
             val jsonObject = JSONObject(data)
-            val jsonArray = jsonObject.getJSONArray("richText")
+            val jsonArray = jsonObject.getJSONArray("richTexts")
             val richTextList = Gson().fromJson(jsonArray.toString(), Array<RichText>::class.java).toList()
             // TODO: Replace with loading List<RichText> by calling API -->
 
